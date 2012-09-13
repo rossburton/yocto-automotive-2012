@@ -39,7 +39,7 @@ MIPS and PowerPC
 So many distributions...
 
 # what's the difference between yocto and android, linaro, tizen, buildroot,
-# hacking your favourite desktop distribution...
+# or hacking your favourite desktop distribution...
 
 -- [engineer.jpg]
 
@@ -47,7 +47,8 @@ Why pick the Yocto Project?
 
 # custom distro to your needs
 # big or small
-# ?
+# tools to help do distribution building
+# TODO
 
 -- [cables.jpg]
 
@@ -84,6 +85,6 @@ Who is in the Yocto Project?
 
 
 
-# terminology - bitbake oe poky layers
+# explain terminology - bitbake oe poky layers
 
-# VM system.  tizen for media, yocto for dom0, dashboard panel?
+# example use - VM system.  tizen for media, yocto for dom0, dashboard panel?
