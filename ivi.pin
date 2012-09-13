@@ -24,29 +24,37 @@ Umbrella project
 
 Collaboration space
 
+# providing a forum for diverse users to share problems and solutions
+
+
 -- [umbrella.jpg]
 
 Build environment
 and development tools
+
+# build system, package metadata, Eclipse plugin, SDK
 
 -- [umbrella.jpg]
 
 Supports x86, ARM,
 MIPS and PowerPC
 
+# Core metadata builds for virtualised machines, various BSPs for specific
+# platform support
+
 -- [minifigs.jpg]
 
-So many distributions...
+So many distributions…
 
 # what's the difference between yocto and android, linaro, tizen, buildroot,
 # or hacking your favourite desktop distribution...
 
 -- [engineer.jpg]
 
-Why pick the Yocto Project?
+…so why pick the Yocto Project?
 
+# linux for embedded, from a 4mb arm to mission critical xeon clusters
 # custom distro to your needs
-# big or small
 # tools to help do distribution building
 # TODO
 
