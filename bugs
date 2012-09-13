@@ -1,0 +1,9 @@
+when setting stage colour it doesn't fade
+
+set size of image, ie 80%
+
+fill with aspect ratio
+
+no fade when same image
+
+doesn't reload images if they change

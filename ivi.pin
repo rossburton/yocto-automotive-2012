@@ -1,0 +1,89 @@
+#!/usr/bin/env pinpoint
+
+[bottom]
+[fill]
+[font=Gill Sans 50px]
+
+-- [stage-color=white] [fit] [yocto.jpg]
+
+# Ross Burton, Userspace Architect, OTC, Intel
+# This is an introduction to Yocto Project
+
+-- [cars.jpg]
+
+What is the Yocto Project?
+
+# confusion in the automotive community about yocto
+# invited by LF to clear it up
+
+-- [umbrella.jpg]
+
+Umbrella project
+
+-- [umbrella.jpg]
+
+Collaboration space
+
+-- [umbrella.jpg]
+
+Build environment
+and development tools
+
+-- [umbrella.jpg]
+
+Supports x86, ARM,
+MIPS and PowerPC
+
+-- [minifigs.jpg]
+
+So many distributions...
+
+# what's the difference between yocto and android, linaro, tizen, buildroot,
+# hacking your favourite desktop distribution...
+
+-- [engineer.jpg]
+
+Why pick the Yocto Project?
+
+# custom distro to your needs
+# big or small
+# ?
+
+-- [cables.jpg]
+
+Some are easy to hack on,
+but you'll regret that later
+
+# debugging when you need to rebuild
+# switching hardware or toolchain
+# GPL compliance (source *and* build instructions, more so for hack-a-distro)
+# commercial support
+# upgrades (hack fedora and ship, 1 year later need to ship an update... how?)
+
+-- [plan.jpg]
+
+Designed for the long term
+
+# generate archives for gpl compliance
+# reproducable builds for the entire system
+
+-- [tumble.jpg]
+
+Won't fall apart in time
+
+# TODO
+
+-- [group.jpg]
+
+Who is in the Yocto Project?
+
+- individuals scratching an itch
+- embedded hw companies (intel, ti, freescale)
+- embedded osvs (wr, enea, mentor graphics)
+
+
+
+
+# terminology - bitbake oe poky layers
+
+# VM system.  tizen for media, yocto for dom0, dashboard panel?
