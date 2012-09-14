@@ -4,43 +4,46 @@
 [fill]
 [font=Gill Sans 50px]
 
--- [stage-color=white] [fit] [yocto.jpg]
+-- [yocto.jpg]
 
-# Ross Burton, Userspace Architect, OTC, Intel
-# This is an introduction to Yocto Project
+# Ross Burton, Userspace Architect for Yocto
+# Work in Open Source Technology Centre at Intel
+# This session is a high level introduction to the Yocto Project
 
 -- [cars.jpg]
 
 What is the Yocto Project?
 
-# confusion in the automotive community about yocto
-# invited by LF to clear it up
+# Appears to be confusion in the automotive community about the Yocto Project
+# We were invited by LF to come here and clarify what Yocto is
+# So, the Yocto Project is...
 
 -- [umbrella.jpg]
 
 Umbrella project
 
--- [umbrella.jpg]
+# You don't download or install the Yocto Project itself
+# Just like you don't install the Apache Foundation
 
-Collaboration space
-
-# providing a forum for diverse users to share problems and solutions
-
-
--- [umbrella.jpg]
+-- [tools.jpg]
 
 Build environment
 and development tools
 
 # build system, package metadata, Eclipse plugin, SDK
 
--- [umbrella.jpg]
+-- [cpus.jpg]
 
-Supports x86, ARM,
-MIPS and PowerPC
+x86 • ARM • MIPS • PowerPC
 
 # Core metadata builds for virtualised machines, various BSPs for specific
 # platform support
+
+-- [chat.jpg]
+
+Collaboration space
+
+# providing a forum for diverse users to share problems and solutions
 
 -- [minifigs.jpg]
 
