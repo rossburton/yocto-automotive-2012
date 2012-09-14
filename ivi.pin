@@ -45,18 +45,23 @@ Collaboration space
 
 # providing a forum for diverse users to share problems and solutions
 
+
+# PAUSE
+
+
 -- [minifigs.jpg]
 
-So many distributions…
+So many choices…
 
+# When picking a platform 
 # what's the difference between yocto and android, linaro, tizen, buildroot,
 # or hacking your favourite desktop distribution...
 
 -- [engineer.jpg]
 
-…so why pick the Yocto Project?
+…why pick the Yocto Project?
 
-# linux for embedded, from a 4mb arm to mission critical xeon clusters
+# linux for embedded, from a small ARM to mission critical xeon clusters
 # custom distro to your needs
 # tools to help do distribution building
 # TODO
@@ -68,9 +73,8 @@ but you'll regret that later
 
 # debugging when you need to rebuild
 # switching hardware or toolchain
-# GPL compliance (source *and* build instructions, more so for hack-a-distro)
 # commercial support
-# upgrades (hack fedora and ship, 1 year later need to ship an update... how?)
+# TODO
 
 -- [plan.jpg]
 
@@ -83,6 +87,8 @@ Designed for the long term
 
 Won't fall apart in time
 
+# upgrades (hack fedora and ship, 1 year later need to ship an update... how?)
+# GPL compliance (source *and* build instructions, more so for hack-a-distro)
 # TODO
 
 -- [group.jpg]
