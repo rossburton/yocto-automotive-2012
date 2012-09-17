@@ -2,12 +2,12 @@
 
 [bottom]
 [fill]
-[font=Gill Sans 50px]
+[font=Gill Sans 60px]
 
 -- [yocto.jpg]
 
 # Ross Burton, Userspace Architect for Yocto
-# Work in Open Source Technology Centre at Intel
+# Open Source Technology Centre at Intel
 # This session is a high level introduction to the Yocto Project
 
 -- [cars2.jpg]
@@ -30,11 +30,12 @@ Umbrella project
 Build environment
 and development tools
 
-# build system, package metadata, Eclipse plugin, SDK
+# build system (bitbake), package metadata (oe-core), Eclipse plugin, SDK
 
--- [cpus.jpg]
+-- [cpus.jpg] [text-align=center]
 
-x86 • ARM • MIPS • PowerPC
+x86 • ARM
+MIPS • PowerPC
 
 # Core metadata builds for virtualised machines, various BSPs for specific
 # platform support
@@ -69,7 +70,7 @@ So many choices…
 -- [cables.jpg]
 
 Some are easy to hack on,
-but you'll regret that later
+but you’ll regret that later
 
 # debugging when you need to rebuild
 # switching hardware or toolchain
@@ -85,7 +86,7 @@ Designed for the long term
 
 -- [tumble.jpg]
 
-Won't fall apart in time
+Won’t fall apart in time
 
 # upgrades (hack fedora and ship, 1 year later need to ship an update... how?)
 # GPL compliance (source *and* build instructions, more so for hack-a-distro)
@@ -95,13 +96,103 @@ Won't fall apart in time
 
 Who is in the Yocto Project?
 
-# individuals scratching an itch
-# embedded hw companies (intel, ti, freescale)
-# embedded osvs (wr, enea, mentor graphics)
+-- [cpus.jpg]
 
+Hardware manufacturers
 
+# i.e. Intel, Texas Instruments, Freescale
 
+-- [cat-computer.jpg]
 
-# explain terminology - bitbake oe poky layers
+Embedded OSVs
 
-# example use - VM system.  tizen for media, yocto for dom0, dashboard panel?
+# i.e. Wind River, MontaVista, Enea Software, Mentor Graphics
+
+-- [cat.jpg]
+
+Consultants and individuals
+
+# Consultants
+# individuals "scratching an itch" for their own projects
+
+- [xwing.jpg]
+
+How does it work?
+
+# Enough about what the Yocto Project can do
+# How does it do it?
+
+- [cake.jpg]
+
+It’s all about the layers
+
+# A YP build is assembled from a number of layers
+# Layers are modular and you can combine layers from different sources
+
+- [text-align=center] [blueprint.jpg]
+
+Bitbake
+
+# Build system
+
+- [text-align=center] [blueprint.jpg] [transition=none]
+
+oe-core
+Bitbake
+
+# core metadata
+# toolchain, kernel, eglibc, Xorg, Wayland (soon), graphical toolkits
+
+- [text-align=center] [blueprint.jpg] [transition=none]
+
+meta-intel
+oe-core
+Bitbake
+
+# Intel hardware BSP
+
+- [text-align=center] [blueprint.jpg] [transition=none]
+
+meta-yocto
+meta-intel
+oe-core
+Bitbake
+
+# Distribution policy
+# (Poky in meta-yocto for historial reasons)
+
+- [guacamayo.jpg]
+
+Real World Example:
+Guacamayo
+
+# Real world example, Guacamayo.
+# Disclosure: maintainer in my own time
+# Media box software, set-top box, wireless speakers, etc
+
+- [text-align=center] [guacamayo.jpg]
+
+meta-guacamayo
+meta-ti
+meta-raspberrypi
+meta-yocto-bsp
+meta-yocto
+oe-core
+Bitbake
+
+# Builds oe-core, Poky distro, Poky/RPi/TI BSPs, and extra packages
+
+-
+
+Use Case: dom0
+
+-
+
+Use Case: single purpose computer
+
+# TODO better name
+
+# Any of the numerous specalised embedded devices in a car
+# Such as dashboard, engine management
+
+-
