@@ -32,7 +32,7 @@ and development tools
 
 # build system (bitbake), package metadata (oe-core), Eclipse plugin, SDK
 
--- [cpus.jpg] [text-align=center]
+-- [cpus.jpg] [text-align=center] [center]
 
 x86 • ARM
 MIPS • PowerPC
@@ -50,7 +50,7 @@ Collaboration space
 # PAUSE
 
 
--- [minifigs.jpg]
+-- [minifigs.jpg] [center]
 
 So many choices…
 
@@ -77,14 +77,14 @@ but you’ll regret that later
 # commercial support
 # TODO
 
--- [road.jpg]
+-- [road.jpg] [top]
 
 Designed for the long term
 
 # generate archives for gpl compliance
 # reproducable builds for the entire system
 
--- [tumble.jpg]
+-- [tumble.jpg] [top]
 
 Won’t fall apart in time
 
@@ -182,9 +182,9 @@ Bitbake
 
 # Builds oe-core, Poky distro, Poky/RPi/TI BSPs, and extra packages
 
--
+- [dolls.jpg] [top]
 
-Use Case: dom0
+Use Case: Virtualisation
 
 -
 
@@ -195,4 +195,13 @@ Use Case: single purpose computer
 # Any of the numerous specalised embedded devices in a car
 # Such as dashboard, engine management
 
--
+- [qa.jpg]
+
+Q&amp;A
+
+- [yocto.jpg]
+
+Thanks!
+
+# Credits
+# TODO
