@@ -14,14 +14,16 @@
 
 What is the Yocto Project?
 
-# Appears to be confusion in the automotive community about the Yocto Project
-# We were invited by LF to come here and clarify what Yocto is
+# Appears to be confusion in the automotive community about the Yocto Project.
+# What is is, what it can offer and so on.
+# We were invited by the LF to come here and clarify what Yocto is.
 # So, the Yocto Project is...
 
 -- [umbrella.jpg]
 
 Umbrella project
 
+# An umbrella project.
 # You don't download or install the Yocto Project itself
 # Just like you don't install the Apache Foundation
 
@@ -30,22 +32,30 @@ Umbrella project
 Build environment
 and development tools
 
-# build system (bitbake), package metadata (oe-core), Eclipse plugin, SDK
+# A build environment and development tools for that environment.
+# Specifically, a build system (bitbake), package metadata (oe-core),
+# Eclipse plugin, Application Development Toolkit (deployable toolchain)
 
 -- [cpus.jpg] [text-align=center] [center]
 
 x86 • ARM
 MIPS • PowerPC
 
-# Core metadata builds for virtualised machines, various BSPs for specific
-# platform support
+# We support all of the big architectures.
+# Core metadata builds for qemu machines for all of these architectures
+# Ensures that the core builds for everything
+# Optional BSPs for specific platform support
+# Everything is cross compiled, so no "but it worked for x86" problems
 
 -- [people.jpg]
 
 Collaboration space
 
-# providing a forum for diverse users to share problems and solutions
+# Finally YP is a collaboration space, providing a forum
+# for diverse users to share their problems and solutions
+# Public mailing lists and confidential forums
 
+# TODO: confidential?
 
 # PAUSE
 
