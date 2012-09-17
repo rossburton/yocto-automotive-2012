@@ -192,6 +192,50 @@ Bitbake
 
 # Builds oe-core, Poky distro, Poky/RPi/TI BSPs, and extra packages
 
+- [corridor.jpg]
+
+Let's build something!
+
+# Enough talk, let's pretend to build something.
+
+- [corridor.jpg] [center]
+
+<tt>$ <b>wget http://downloads.yoctoproject.org/…
+       /poky-denzil-7.0.tar.bz2</b>
+$ <b>tar xjf poky-denzil-7.0.tar.bz2</b>
+$ <b>cd poky-denzil-7.0</b></tt>
+
+# One of the downloads from the Yocto Project is Poky, a reference distribution.
+# This is basically Bitbake, oe-core, and meta-yocto glued together for convenience
+# Grabbing and extracting the tarball of the 7.0 "denzil" release is as you'd expect
+
+- [corridor.jpg]
+
+<tt> $ <b>./oe-init-build-env</b>
+ ### Shell environment set up for builds. 
+ ### You can now run 'bitbake &lt;target&gt;‘
+ Common targets are:
+   core-image-minimal
+   core-image-sato
+ …
+ $ <b>bitbake core-image-minimal</b></tt>
+
+# TODO
+
+- [corridor.jpg]
+
+<tt>Currently 7 running tasks (5452 of 9438):
+0: webkit-gtk-1.8.2-r1 do_compile (pid 27137)
+1: qt4-embedded-4.8.1-r48.1 do_compile (pid 27129)
+2: qt4-x11-free-4.8.1-r46.1 do_compile (pid 27096)
+3: systemtap-1.8+git1…-r0 do_compile (pid 27130)
+4: gmp-5.0.5-r0 do_package_write_rpm (pid 27131)
+5: libglade-2.6.4-r4 do_package_write_rpm (pid 27134)
+6: nfs-utils-1.2.3-r5 do_unpack (pid 27187)</tt>
+
+# TODO
+# insert witty joke about webkit and qt4 taking forever
+
 - [dolls.jpg] [top]
 
 Use Case: Virtualisation
