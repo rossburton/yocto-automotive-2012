@@ -209,7 +209,7 @@ $ <b>cd poky-denzil-7.0</b></tt>
 # This is basically Bitbake, oe-core, and meta-yocto glued together for convenience
 # Grabbing and extracting the tarball of the 7.0 "denzil" release is as you'd expect
 
-- [corridor.jpg]
+- [corridor.jpg] [center]
 
 <tt> $ <b>./oe-init-build-env</b>
  ### Shell environment set up for builds. 
@@ -220,9 +220,12 @@ $ <b>cd poky-denzil-7.0</b></tt>
  …
  $ <b>bitbake core-image-minimal</b></tt>
 
-# TODO
+# You need to source a shell script to setup the environment.  Then, you can run
+# bitbake with the name of the target you want Targets can be anything - images,
+# packages, or operations. Let's build core-image-minimal, a fairly small system
+# that boots to a terminal.
 
-- [corridor.jpg]
+- [corridor.jpg] [center]
 
 <tt>Currently 7 running tasks (5452 of 9438):
 0: webkit-gtk-1.8.2-r1 do_compile (pid 27137)
@@ -233,19 +236,41 @@ $ <b>cd poky-denzil-7.0</b></tt>
 5: libglade-2.6.4-r4 do_package_write_rpm (pid 27134)
 6: nfs-utils-1.2.3-r5 do_unpack (pid 27187)</tt>
 
-# TODO
-# insert witty joke about webkit and qt4 taking forever
+# While bitbake is running you'll see a report of what it's doing, something
+# like this. This isn't actually the output from core-image-minimal but a
+# colleague's world build that happened to be running when I was writing the
+# slides.  Poor guy is in for a long wait, webkit and two qt builds.
+
+- [corridor.jpg] [center]
+
+TODO tmp/deploy
+
+TODO hob
+
+- [question.jpg]
+
+Now what?
+
+# So that's how to build an image, but what could we do with it?
 
 - [dolls.jpg] [top]
 
 Use Case: Virtualisation
 
+# I expect virtualisation to be common in next-generation automotive systems as
+# individual processors become more powerful and logically separate systems are
+# ran in virtual machines on fewer physical processors.
+
+# Because systems built by Yocto can be trivially tuned to be exactly what is
+# required and nothing else they are a good match for virtualised systems, both
+# as a minimal host that does simply manages the virtual machines, or as a
+# specialized virtual machine itself.
+
 -
 
-Use Case: single purpose computer
+Use Case: single purpose system
 
-# TODO better name
-
+# TODO
 # Any of the numerous specalised embedded devices in a car
 # Such as dashboard, engine management
 
