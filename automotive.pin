@@ -171,27 +171,6 @@ Bitbake
 # Distribution policy
 # (Poky in meta-yocto for historial reasons)
 
-- [guacamayo.jpg]
-
-Real World Example:
-Guacamayo
-
-# Real world example, Guacamayo.
-# Disclosure: maintainer in my own time
-# Media box software, set-top box, wireless speakers, etc
-
-- [text-align=center] [guacamayo.jpg]
-
-meta-guacamayo
-meta-ti
-meta-raspberrypi
-meta-yocto-bsp
-meta-yocto
-oe-core
-Bitbake
-
-# Builds oe-core, Poky distro, Poky/RPi/TI BSPs, and extra packages
-
 - [corridor.jpg]
 
 Let's build something!
