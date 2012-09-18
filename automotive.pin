@@ -235,7 +235,13 @@ $ <b>cd poky-denzil-7.0</b></tt>
 
 - [corridor.jpg] [center]
 
-TODO tmp/deploy
+<tt>$ ls tmp/deploy/images/
+…
+core-image-minimal-atom-pc-20120918205848.hddimg
+core-image-minimal-atom-pc-20120918205848.iso
+core-image-minimal-atom-pc-20120918205848.rootfs.cpio.gz</tt>
+
+# TODO
 
 -
 
