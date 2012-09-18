@@ -53,9 +53,7 @@ Collaboration space
 
 # Finally YP is a collaboration space, providing a forum
 # for diverse users to share their problems and solutions
-# Public mailing lists and confidential forums
-
-# TODO: confidential?
+# Public mailing lists and weekly phone conference
 
 # PAUSE
 
@@ -124,6 +122,21 @@ Consultants and individuals
 
 # Consultants
 # individuals "scratching an itch" for their own projects
+
+-
+
+Advisory Board
+
+# TODO OWN WORDS
+# YP is a project at the Linux Foundation. Its overseen by an advisory board
+# made up of representatives of the member companies who provide the resources
+# working on the project. The advisory board's first decision was to rename
+# itself to an "advisory board" rather than anything else like committee or a
+# steering group to reflect that the day to day running of the project is in the
+# hands of the architects and maintainers. Its considered a failure if the AB
+# ever had to get involved in technical decisions! This illustrates the open
+# source collaboration and development model that flows to the core of the
+# project.
 
 - [xwing.jpg]
 
