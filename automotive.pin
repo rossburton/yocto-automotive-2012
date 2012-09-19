@@ -2,7 +2,8 @@
 
 [bottom]
 [fill]
-[font=Gill Sans 60px]
+[font=ITC Kabel Semi-Bold 60px]
+[transition=fade]
 
 -- [yocto.jpg]
 
@@ -32,7 +33,7 @@ Umbrella project
 Build environment
 and development tools
 
-# A build environment and development tools for that environment.
+# An embedded build environment and development tools
 # Specifically, a build system (bitbake), package metadata (oe-core),
 # Eclipse plugin, Application Development Toolkit (deployable toolchain)
 
@@ -42,7 +43,7 @@ x86 • ARM
 MIPS • PowerPC
 
 # We support all of the big architectures.
-# Core metadata builds for qemu machines for all of these architectures
+# oe-core builds for qemu machines for all of these architectures
 # Ensures that the core builds for everything
 # Optional BSPs for specific platform support
 # Everything is cross compiled, so no "but it worked for x86" problems
@@ -52,7 +53,7 @@ MIPS • PowerPC
 Collaboration space
 
 # Finally YP is a collaboration space, providing a forum
-# for diverse users to share their problems and solutions
+# for users to share their problems and solutions
 # Public mailing lists and weekly phone conference
 
 # PAUSE
@@ -69,37 +70,39 @@ So many choices…
 
 …why pick the Yocto Project?
 
-# linux for embedded, from a small ARM to mission critical xeon clusters
-# builds a custom distro suited to your needs
-# easy to add, remove, or change components
-# tools to help do distribution building
-# - package repos and image generation
-# - static release archives for license compliance
+# YP is Linux for embedded, from a small ARM board to mission critical xeon clusters
+# Builds a custom distro suited to your needs
+# Easy to add, remove, or change components
+# Open development process, no code drops or license complications
 
 -- [cables.jpg]
 
 Some are easy to hack on,
-but you’ll regret that later
+but you’ll regret it later
 
 # debugging when you need to rebuild
 # switching hardware or toolchain
-# commercial support
 # TODO
 
 -- [road.jpg] [top]
 
 Designed for the long term
 
-# six monthly release cycle but maintained release branches
-# generate archives for gpl compliance
-# reproducable builds for the entire system
+# Yocto is designed for long term use
+# Six monthly release cycle but maintained release branches
+# Commercial support from OSVs
+# Tools to help do the mundane distribution building
+# - Generate package repos and disk images
+# - Static release archives for license compliance
 
 -- [tumble.jpg] [top]
 
 Won’t fall apart in time
 
+# won't surprise you late in product development
 # upgrades (hack fedora and ship, 1 year later need to ship an update... how?)
 # GPL compliance (source *and* build instructions, more so for hack-a-distro)
+# reproducable builds for the entire system
 # TODO
 
 -- [group.jpg]
@@ -188,7 +191,7 @@ Bitbake
 
 - [corridor.jpg]
 
-Let's build something!
+Let’s build something!
 
 # Enough talk, let's pretend to build something.
 
@@ -304,7 +307,7 @@ Now what?
 
 - [dolls.jpg] [top]
 
-Use Case: Virtualisation
+Virtualisation
 
 # I expect virtualisation to be common in next-generation automotive systems as
 # individual processors become more powerful and logically separate systems are
@@ -317,7 +320,7 @@ Use Case: Virtualisation
 
 - [dash.jpg] [top]
 
-Use Case: single purpose system
+Specialised subsystem
 
 # TODO
 # Any of the numerous specalised embedded devices in a car
