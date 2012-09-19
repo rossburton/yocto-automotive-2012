@@ -80,9 +80,11 @@ So many choices…
 Some are easy to hack on,
 but you’ll regret it later
 
-# debugging when you need to rebuild
-# switching hardware or toolchain
-# TODO
+# Especially if your target is x86, it's easy to start with a
+# desktop distribution and chop pieces out
+# Building new pieces and rebuilding the pieces that need changes
+# But when you need to change hardware, or rebuild with different compiler flags
+# It's not that easy any more
 
 -- [road.jpg] [top]
 
@@ -99,11 +101,10 @@ Designed for the long term
 
 Won’t fall apart in time
 
-# won't surprise you late in product development
-# upgrades (hack fedora and ship, 1 year later need to ship an update... how?)
-# GPL compliance (source *and* build instructions, more so for hack-a-distro)
-# reproducable builds for the entire system
-# TODO
+# Yocto won't surprise you late in product development
+# Reproducable builds for the entire system
+# Clear process for updates - easy to make the changes and publish a new image or repo
+# GPL compliant - trivial to public source *and* build instructions
 
 -- [group.jpg]
 
@@ -128,7 +129,7 @@ Consultants and individuals
 # Consultants
 # individuals "scratching an itch" for their own projects
 
-- [owl.jpg] [top]
+-- [owl.jpg] [top]
 
 Advisory Board
 
@@ -143,27 +144,27 @@ Advisory Board
 # source collaboration and development model that flows to the core of the
 # project.
 
-- [xwing.jpg]
+-- [xwing.jpg]
 
 How does it work?
 
 # Enough about what the Yocto Project can do
-# How does it do it?
+# How does it work?
 
-- [cake.jpg]
+-- [cake.jpg]
 
 It’s all about the layers
 
-# A YP build is assembled from a number of layers
+# A YP distribution is assembled from a number of layers
 # Layers are modular and you can combine layers from different sources
 
-- [text-align=center] [blueprint.jpg]
+-- [text-align=center] [blueprint.jpg]
 
 Bitbake
 
 # Build system
 
-- [text-align=center] [blueprint.jpg] [transition=none]
+-- [text-align=center] [blueprint.jpg] [transition=none]
 
 oe-core
 Bitbake
@@ -171,7 +172,7 @@ Bitbake
 # core metadata
 # toolchain, kernel, eglibc, Xorg, Wayland (soon), graphical toolkits
 
-- [text-align=center] [blueprint.jpg] [transition=none]
+-- [text-align=center] [blueprint.jpg] [transition=none]
 
 meta-intel
 oe-core
@@ -179,7 +180,7 @@ Bitbake
 
 # Intel hardware BSP
 
-- [text-align=center] [blueprint.jpg] [transition=none]
+-- [text-align=center] [blueprint.jpg] [transition=none]
 
 meta-yocto
 meta-intel
@@ -189,13 +190,13 @@ Bitbake
 # Distribution policy
 # (Poky in meta-yocto for historial reasons)
 
-- [corridor.jpg]
+-- [corridor.jpg]
 
 Let’s build something!
 
 # Enough talk, let's pretend to build something.
 
-- [corridor.jpg] [center]
+-- [corridor.jpg] [center]
 
 <tt>$ <b>wget http://downloads.yoctoproject.org/…
        /poky-denzil-7.0.tar.bz2</b>
@@ -206,7 +207,7 @@ $ <b>cd poky-denzil-7.0</b></tt>
 # This is basically Bitbake, oe-core, and meta-yocto glued together for convenience
 # Grabbing and extracting the tarball of the 7.0 "denzil" release is as you'd expect
 
-- [corridor.jpg] [center]
+-- [corridor.jpg] [center]
 
 <tt> $ <b>./oe-init-build-env</b>
  ### Shell environment set up for builds. 
@@ -220,7 +221,7 @@ $ <b>cd poky-denzil-7.0</b></tt>
 # First you need to source a shell script to setup the environment. 
 # Now lets have a quick look at the configuration file
 
-- [corridor.jpg] [center]
+-- [corridor.jpg] [center]
 
 <tt> # BB_NUMBER_THREADS = "4"
  # PARALLEL_MAKE = "-j 4"
@@ -245,7 +246,7 @@ $ <b>cd poky-denzil-7.0</b></tt>
 # mirrors; features to enable such as multiarch, installing the toolchain in the
 # image for development, what package format to use, and more.
 
-- [corridor.jpg] [center]
+-- [corridor.jpg] [center]
 
  <tt>$ <b>bitbake core-image-minimal</b></tt>
 
@@ -253,7 +254,7 @@ $ <b>cd poky-denzil-7.0</b></tt>
 # Targets can be anything - images, packages, or operations.
 # Let's build core-image-minimal, a fairly small system that boots to a console
 
-- [corridor.jpg] [center]
+-- [corridor.jpg] [center]
 
 <tt>Currently 7 running tasks (5452 of 9438):
 0: webkit-gtk-1.8.2-r1 do_compile (pid 27137)
@@ -269,7 +270,7 @@ $ <b>cd poky-denzil-7.0</b></tt>
 # colleague's world build that happened to be running when I was writing the
 # slides.  Poor guy is in for a long wait, webkit and two qt builds.
 
-- [corridor.jpg] [center]
+-- [corridor.jpg] [center]
 
 <tt>$ <b>ls tmp/deploy/images/</b>
 …
@@ -295,17 +296,21 @@ core-image-minimal-atom-pc-20120918205848.rootfs.ext3
 # normal repository, ie install some development or debug symbol packages to fix
 # a bug.
 
--
+-- [hob.jpg]
 
-TODO hob demo if I can make it work
+Hob
 
-- [question.jpg]
+# Hob is a graphical interface to bitbake
+# 1st iteration, gtk+ application to configure an image and monitor the build
+# 2nd iteration, web-based
+
+-- [question.jpg]
 
 Now what?
 
 # So that's how to build an image, but what could we do with it?
 
-- [dolls.jpg] [top]
+-- [dolls.jpg] [top]
 
 Virtualisation
 
@@ -318,19 +323,22 @@ Virtualisation
 # as a minimal host that does simply manages the virtual machines, or as a
 # specialized virtual machine itself.
 
-- [dash.jpg] [top]
+-- [dash.jpg] [top]
 
 Specialised subsystem
+
+# Cars are complicated beasts these days with many processors performing specialised roles
+# Dashboard, engine management,
 
 # TODO
 # Any of the numerous specalised embedded devices in a car
 # Such as dashboard, engine management
 
-- [qa.jpg]
+-- [qa.jpg]
 
 Q&amp;A
 
-- [yocto.jpg]
+-- [yocto.jpg]
 
 Thanks!
 
