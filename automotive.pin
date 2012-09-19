@@ -57,7 +57,6 @@ Collaboration space
 
 # PAUSE
 
-
 -- [minifigs.jpg] [center]
 
 So many choices…
@@ -71,9 +70,11 @@ So many choices…
 …why pick the Yocto Project?
 
 # linux for embedded, from a small ARM to mission critical xeon clusters
-# custom distro to your needs
+# builds a custom distro suited to your needs
+# easy to add, remove, or change components
 # tools to help do distribution building
-# TODO
+# - package repos and image generation
+# - static release archives for license compliance
 
 -- [cables.jpg]
 
@@ -89,6 +90,7 @@ but you’ll regret that later
 
 Designed for the long term
 
+# six monthly release cycle but maintained release branches
 # generate archives for gpl compliance
 # reproducable builds for the entire system
 
@@ -210,12 +212,43 @@ $ <b>cd poky-denzil-7.0</b></tt>
    core-image-minimal
    core-image-sato
  …
- $ <b>bitbake core-image-minimal</b></tt>
+ $ <b>emacs conf/local.conf</b></tt>
 
-# You need to source a shell script to setup the environment.  Then, you can run
-# bitbake with the name of the target you want Targets can be anything - images,
-# packages, or operations. Let's build core-image-minimal, a fairly small system
-# that boots to a terminal.
+# First you need to source a shell script to setup the environment. 
+# Now lets have a quick look at the configuration file
+
+- [corridor.jpg] [center]
+
+<tt> # BB_NUMBER_THREADS = "4"
+ # PARALLEL_MAKE = "-j 4"
+ 
+ MACHINE ??= "qemux86"
+ …
+ #MACHINE ?= "qemuarm"
+ #MACHINE ?= "qemumips"
+ #MACHINE ?= "atom-pc"
+ #MACHINE ?= "beagleboard"</tt>
+
+# Just a small fragment of the options available.  Defaults are all reasonable
+# and it will successfully build out of the box.
+
+# For a faster build, change the parallel options. My build machine is a quad
+# core with hyperthreading, so I set both of those to 8.
+
+# Default target is x86 on qemu.  This is trivially changed by simply changing
+# the MACHINE variable.
+
+# Other options include where to keep downloaded tarballs; location of any
+# mirrors; features to enable such as multiarch, installing the toolchain in the
+# image for development, what package format to use, and more.
+
+- [corridor.jpg] [center]
+
+ <tt>$ <b>bitbake core-image-minimal</b></tt>
+
+# Then, you can run bitbake with the name of the target you want
+# Targets can be anything - images, packages, or operations.
+# Let's build core-image-minimal, a fairly small system that boots to a console
 
 - [corridor.jpg] [center]
 
@@ -235,13 +268,29 @@ $ <b>cd poky-denzil-7.0</b></tt>
 
 - [corridor.jpg] [center]
 
-<tt>$ ls tmp/deploy/images/
+<tt>$ <b>ls tmp/deploy/images/</b>
 …
 core-image-minimal-atom-pc-20120918205848.hddimg
 core-image-minimal-atom-pc-20120918205848.iso
-core-image-minimal-atom-pc-20120918205848.rootfs.cpio.gz</tt>
+core-image-minimal-atom-pc-20120918205848.rootfs.cpio.gz
+core-image-minimal-atom-pc-20120918205848.rootfs.ext3
+</tt>
 
-# TODO
+# When it finishes building the results are in the deploy directory
+# Here we can see the constructed root file system as a cpio archive,
+# a bare filesystem, a bootable ISO image, and a disk image.
+# Generally I'd be writing the disk image to a fast USB stick and booting from
+# that for testing.
+
+# The build output is configurable per build and per machine. This build was for
+# a fairly standard Intel system so the final output is typically bootable on
+# those.  Build for a say beagleboard and you'll get kernel, bootloader and
+# rootfs tarballs to write a SD card.
+
+# alongside the images directory there is the package repository that was used
+# to construct the root fs. This can be shared on the network and used as a
+# normal repository, ie install some development or debug symbol packages to fix
+# a bug.
 
 -
 
@@ -266,7 +315,7 @@ Use Case: Virtualisation
 # as a minimal host that does simply manages the virtual machines, or as a
 # specialized virtual machine itself.
 
--
+- [dash.jpg] [top]
 
 Use Case: single purpose system
 
