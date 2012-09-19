@@ -7,3 +7,5 @@ fill with aspect ratio
 no fade when same image
 
 doesn't reload images if they change
+
+dont eat all memory ever - crash in DRI if too many textures
