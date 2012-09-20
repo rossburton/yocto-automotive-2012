@@ -109,6 +109,7 @@ Won’t fall apart in time
 -- [group.jpg]
 
 Who is in the Yocto Project?
+# Not a complete list
 
 -- [cpus.jpg]
 
@@ -121,12 +122,13 @@ Hardware manufacturers
 Embedded OSVs
 
 # i.e. Wind River, MontaVista, Enea Software, Mentor Graphics
+# Commercial supported linux from these vendors
 
 -- [cat.jpg]
 
 Consultants and individuals
 
-# Consultants
+# Consultants, small and large
 # individuals "scratching an itch" for their own projects
 
 -- [owl.jpg] [top]
@@ -175,6 +177,7 @@ meta-intel
 oe-core
 Bitbake
 
+# unless you happy with a qemu emulated machine you'll need a bsp
 # Intel hardware BSP, such as cedar trail (atom, netbook/industrial), fish river
 # island 2 (atom, digital signage, smart services), jasper forest (xeon, server)
 
