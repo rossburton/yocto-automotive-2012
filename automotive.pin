@@ -62,15 +62,16 @@ Collaboration space
 
 So many choices…
 
-# When picking a platform 
-# what's the difference between yocto and android, linaro, tizen,
-# buildroot, baserock, or hacking your favourite desktop distribution...
+# When picking a platform what's the difference between yocto and
+# android, linaro, tizen, buildroot, baserock, or hacking your
+# favourite desktop distribution...
 
 -- [engineer.jpg]
 
 …why pick the Yocto Project?
 
-# YP is Linux for embedded, from a small ARM board to mission critical xeon clusters
+# YP is Linux for embedded, from a small ARM board to mission critical
+#  xeon clusters
 # Builds a custom distro suited to your needs
 # Easy to add, remove, or change components
 # Open development process, no code drops or license complications
@@ -103,7 +104,8 @@ Won’t fall apart in time
 
 # Yocto won't surprise you late in product development
 # Reproducable builds for the entire system
-# Clear process for updates - easy to make the changes and publish a new image or repo
+# Clear process for updates - easy to make the changes
+# and publish a new image or repo
 # GPL compliant - trivial to public source *and* build instructions
 
 -- [group.jpg]
@@ -136,11 +138,14 @@ Consultants and individuals
 Advisory Board
 
 # finally should mention the advisory board.
-# Yocto is a project at the Linux Foundation, not owned by any particular company
-# The advisory board is comprised of reps from member companies working on Yocto
-# The boards first action was to name itself "advisory board" rather than "steering group"
-# to reflect that it offers advice and input and doesn't control the project
-# technical direction entirely in the hands of the architects and maintainers
+# Yocto is a project at the Linux Foundation, not owned by any
+# particular company
+# The advisory board is comprised of reps from member companies
+# working on Yocto
+# The boards first action was to name itself "advisory board" rather
+# than "steering group" to reflect that it offers advice and input and
+# doesn't control the project technical direction entirely in the
+# hands of the architects and maintainers
 
 -- [xwing.jpg]
 
@@ -204,9 +209,10 @@ Let’s build something!
 $ <b>tar xjf poky-denzil-7.0.tar.bz2</b>
 $ <b>cd poky-denzil-7.0</b></tt>
 
-# One of the downloads from the Yocto Project is Poky, a reference distribution.
-# This is basically Bitbake, oe-core, and meta-yocto glued together for convenience
-# Grabbing and extracting the tarball of the 7.0 "denzil" release is as you'd expect
+# One of the downloads from the Yocto Project is Poky, a reference
+# distribution.  This is basically Bitbake, oe-core, and meta-yocto
+# glued together for convenience Grabbing and extracting the tarball
+# of the 7.0 "denzil" release is as you'd expect
 
 -- [corridor.jpg] [center]
 
@@ -234,18 +240,20 @@ $ <b>cd poky-denzil-7.0</b></tt>
  #MACHINE ?= "atom-pc"
  #MACHINE ?= "beagleboard"</tt>
 
-# Just a small fragment of the options available.  Defaults are all reasonable
-# and it will successfully build out of the box.
+# Just a small fragment of the options available.  Defaults are all
+# reasonable and it will successfully build out of the box.
 
-# For a faster build, change the parallel options. My build machine is a quad
-# core with hyperthreading, so I set both of those to 8 to keep it busy
+# For a faster build, change the parallel options. My build machine is
+# a quad core with hyperthreading, so I set both of those to 8 to keep
+# it busy
 
-# Default target is x86 on qemu.  This is trivially changed by simply changing
-# the MACHINE variable.
+# Default target is x86 on qemu.  This is trivially changed by simply
+# changing the MACHINE variable.
 
-# Other options include where to keep downloaded tarballs; location of any
-# mirrors; features to enable such as multiarch, installing the toolchain in the
-# image for development, what package format to use, and more.
+# Other options include where to keep downloaded tarballs; location of
+# any mirrors; features to enable such as multiarch, installing the
+# toolchain in the image for development, what package format to use,
+# and more.
 
 -- [corridor.jpg] [center]
 
@@ -253,8 +261,9 @@ $ <b>cd poky-denzil-7.0</b></tt>
 
 # Then, you can run bitbake with the name of the target you want
 # Targets can be anything - images, packages, or operations.
-# Let's build core-image-minimal, a small system that boots to a console
-# good start to build up from if you're making a single-purpose system
+# Let's build core-image-minimal, a small system that boots to a
+# console good start to build up from if you're making a
+# single-purpose system
 
 -- [corridor.jpg] [center]
 
@@ -267,10 +276,11 @@ $ <b>cd poky-denzil-7.0</b></tt>
 5: libglade-2.6.4-r4 do_package_write_rpm (pid 27134)
 6: nfs-utils-1.2.3-r5 do_unpack (pid 27187)</tt>
 
-# While bitbake is running you'll see a report of what it's doing, something
-# like this. This isn't actually the output from core-image-minimal but a
-# colleague's world build that happened to be running when I was writing the
-# slides.  Poor guy is in for a long wait, webkit and two qt builds.
+# While bitbake is running you'll see a report of what it's doing,
+# something like this. This isn't actually the output from
+# core-image-minimal but a colleague's world build that happened to be
+# running when I was writing the slides.  Poor guy is in for a long
+# wait, webkit and two qt builds.
 
 -- [corridor.jpg] [center]
 
@@ -285,18 +295,18 @@ core-image-minimal-atom-pc-20120918205848.rootfs.ext3
 # When it finishes building the results are in the deploy directory
 # Here we can see the constructed root file system as a cpio archive,
 # a bare filesystem, a bootable ISO image, and a disk image.
-# Generally I'd be writing the disk image to a fast USB stick with dd and
-# booting from that for testing.
+# Generally I'd be writing the disk image to a fast USB stick with dd
+# and booting from that for testing.
 
-# The build output is configurable per build and per machine. This build was for
-# a fairly standard Intel system so the final output is typically bootable on
-# those.  Build for a say beagleboard and you'll get kernel, bootloader and
-# rootfs tarballs to write a SD card.
+# The build output is configurable per build and per machine. This
+# build was for a fairly standard Intel system so the final output is
+# typically bootable on those.  Build for a say beagleboard and you'll
+# get kernel, bootloader and rootfs tarballs to write a SD card.
 
-# alongside the images directory there is the package repository that was used
-# to construct the root fs. This can be shared on the network and used as a
-# normal repository, ie install some development or debug symbol packages to fix
-# a bug.
+# alongside the images directory there is the package repository that
+# was used to construct the root fs. This can be shared on the network
+# and used as a normal repository, ie install some development or
+# debug symbol packages to fix a bug.
 
 -- [hob.jpg]
 
@@ -318,14 +328,15 @@ Now what?
 
 Virtualisation
 
-# I expect virtualisation to be common in next-generation automotive systems as
-# individual processors become more powerful and logically separate systems are
-# ran in virtual machines on fewer physical processors.
+# I expect virtualisation to be common in next-generation automotive
+# systems as individual processors become more powerful and logically
+# separate systems are ran in virtual machines on fewer physical
+# processors.
 
-# Because systems built by Yocto can be trivially tuned to be exactly what is
-# required and nothing else they are a good match for virtualised systems, both
-# as a minimal host that does simply manages the virtual machines, or as a
-# specialized virtual machine itself.
+# Because systems built by Yocto can be trivially tuned to be exactly
+# what is required and nothing else they are a good match for
+# virtualised systems, both as a minimal host that does simply manages
+# the virtual machines, or as a specialized virtual machine itself.
 
 -- [dash.jpg] [top]
 
